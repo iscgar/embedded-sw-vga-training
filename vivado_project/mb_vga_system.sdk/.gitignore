@@ -1,0 +1,10 @@
+*/
+!vga/
+!vga/*
+
+*.o
+*.a
+*.elf
+*.log
+*.project
+*.cproject
