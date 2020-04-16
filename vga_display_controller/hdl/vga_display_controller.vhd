@@ -4,6 +4,9 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use work.vga_package.all;
 
+library xil_defaultlib;
+use xil_defaultlib.pixel_fifo;
+
 entity vga_display_controller is
     generic(
         G_S_AXI_DATA_WIDTH : integer := C_SLV_DWIDTH;
@@ -12,9 +15,11 @@ entity vga_display_controller is
         G_VGA_BLUE_WIDTH   : integer := C_VGA_COLOR_WIDTH
     );
     port(
+        -- AXI clock and rst
+        s_axi_aclk         : in std_logic;
+        aresetn            : in std_logic;
+
         -- AXI4Lite Register Slave Interface
-        axi_slv_aclk       : in std_logic;
-        axi_slv_aresetn    : in std_logic;
         axi_slv_awaddr     : in std_logic_vector(C_SLV_AWIDTH - 1 downto 0);
         axi_slv_awprot     : in std_logic_vector(2 downto 0);
         axi_slv_awvalid    : in std_logic;
@@ -35,14 +40,21 @@ entity vga_display_controller is
         axi_slv_rvalid     : out std_logic;
         axi_slv_rready     : in std_logic;
 
-        -- Avalon DDR Master Interface
-        ddr_waitrequest    : in std_logic; -- AVALON_MASTER WAITREQUEST
-        ddr_rd_valid       : in std_logic; -- AVALON_MASTER READDATAVALID
-        ddr_readdata       : in std_logic_vector(C_MST_DWIDTH - 1 downto 0); -- AVALON_MASTER READDATA
-        ddr_rd             : out std_logic; -- AVALON_MASTER READ
-        ddr_rd_burst_count : out std_logic_vector(10 downto 0); -- AVALON_MASTER BURSTCOUNT
-        ddr_address        : out std_logic_vector(C_MST_AWIDTH - 1 downto 0); -- AVALON_MASTER ADDRESS
-        ddr_read_error     : in std_logic; -- Pulse
+        -- AXI4 DDR Master Interface
+        axi_mst_araddr     : out std_logic_vector(C_MST_AWIDTH - 1 downto 0);
+        axi_mst_arlen      : out std_logic_vector(7 downto 0);
+        axi_mst_arsize     : out std_logic_vector(2 downto 0);
+        axi_mst_arburst    : out std_logic_vector(1 downto 0);
+        axi_mst_arprot     : out std_logic_vector(2 downto 0);
+        axi_mst_arcache    : out std_logic_vector(3 downto 0);
+        axi_mst_aruser     : out std_logic_vector(3 downto 0);
+        axi_mst_arvalid    : out std_logic;
+        axi_mst_arready    : in std_logic;
+        axi_mst_rdata      : in std_logic_vector(C_MST_DWIDTH - 1 downto 0);
+        axi_mst_rresp      : in std_logic_vector(1 downto 0);
+        axi_mst_rlast      : in std_logic;
+        axi_mst_rvalid     : in std_logic;
+        axi_mst_rready     : out std_logic;
 
         -- VGA pixel clock
         vga_pixel_clock    : in std_logic;
@@ -66,13 +78,6 @@ architecture vga_display_controller_arch of vga_display_controller is
     attribute X_INTERFACE_INFO of vga_sys_intr         : signal is "xilinx.com:signal:interrupt:1.0 vga_sys_intr INTERRUPT";
     attribute X_INTERFACE_PARAMETER of vga_sys_intr    : signal is "XIL_INTERFACENAME vga_sys_intr, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 0";
 
-    attribute X_INTERFACE_INFO of ddr_rd               : signal is "xilinx.com:interface:avalon:1.0 M_Avalon READ";
-    attribute X_INTERFACE_INFO of ddr_rd_valid         : signal is "xilinx.com:interface:avalon:1.0 M_Avalon READDATAVALID";
-    attribute X_INTERFACE_INFO of ddr_waitrequest      : signal is "xilinx.com:interface:avalon:1.0 M_Avalon WAITREQUEST";
-    attribute X_INTERFACE_INFO of ddr_address          : signal is "xilinx.com:interface:avalon:1.0 M_Avalon ADDRESS";
-    attribute X_INTERFACE_INFO of ddr_rd_burst_count   : signal is "xilinx.com:interface:avalon:1.0 M_Avalon BURSTCOUNT";
-    attribute X_INTERFACE_INFO of ddr_readdata         : signal is "xilinx.com:interface:avalon:1.0 M_Avalon READDATA";
-
     attribute X_INTERFACE_INFO of axi_slv_awaddr       : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
     attribute X_INTERFACE_INFO of axi_slv_awprot       : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWPROT";
     attribute X_INTERFACE_INFO of axi_slv_awvalid      : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
@@ -93,13 +98,29 @@ architecture vga_display_controller_arch of vga_display_controller is
     attribute X_INTERFACE_INFO of axi_slv_rvalid       : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
     attribute X_INTERFACE_INFO of axi_slv_rready       : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
 
-    attribute X_INTERFACE_INFO of axi_slv_aresetn      : signal is "xilinx.com:signal:reset:1.0 axi_slv_aresetn RST";
-    attribute X_INTERFACE_PARAMETER of axi_slv_aresetn : signal is "XIL_INTERFACENAME axi_slv_aresetn, POLARITY ACTIVE_LOW";
+    attribute X_INTERFACE_INFO of axi_mst_araddr       : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARADDR";
+    attribute X_INTERFACE_INFO of axi_mst_arlen        : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARLEN";
+    attribute X_INTERFACE_INFO of axi_mst_arsize       : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARSIZE";
+    attribute X_INTERFACE_INFO of axi_mst_arburst      : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARBURST";
+    attribute X_INTERFACE_INFO of axi_mst_arprot       : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARPROT";
+    attribute X_INTERFACE_INFO of axi_mst_arcache      : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARCACHE";
+    attribute X_INTERFACE_INFO of axi_mst_aruser       : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARUSER";
+    attribute X_INTERFACE_INFO of axi_mst_arvalid      : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARVALID";
+    attribute X_INTERFACE_INFO of axi_mst_arready      : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
+    attribute X_INTERFACE_INFO of axi_mst_rdata        : signal is "xilinx.com:interface:aximm:1.0 M_AXI RDATA";
+    attribute X_INTERFACE_INFO of axi_mst_rresp        : signal is "xilinx.com:interface:aximm:1.0 M_AXI RRESP";
+    attribute X_INTERFACE_INFO of axi_mst_rlast        : signal is "xilinx.com:interface:aximm:1.0 M_AXI RLAST";
+    attribute X_INTERFACE_INFO of axi_mst_rvalid       : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
+    attribute X_INTERFACE_INFO of axi_mst_rready       : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
 
-    attribute X_INTERFACE_INFO of axi_slv_aclk         : signal is "xilinx.com:signal:clock:1.0 axi_slv_aclk CLK";
-    attribute X_INTERFACE_PARAMETER of axi_slv_aclk    : signal is "XIL_INTERFACENAME axi_slv_aclk, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET axi_slv_aresetn";
+    attribute X_INTERFACE_INFO of aresetn              : signal is "xilinx.com:signal:reset:1.0 aresetn RST";
+    attribute X_INTERFACE_PARAMETER of aresetn         : signal is "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+
+    attribute X_INTERFACE_INFO of s_axi_aclk           : signal is "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
+    attribute X_INTERFACE_PARAMETER of s_axi_aclk      : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF M_AXI:S_AXI, ASSOCIATED_RESET aresetn, INSERT_VIP 0";
 
     attribute X_INTERFACE_INFO of vga_pixel_clock      : signal is "xilinx.com:signal:clock:1.0 vga_pixel_clock CLK";
+    attribute X_INTERFACE_PARAMETER of vga_pixel_clock : signal is "XIL_INTERFACENAME vga_pixel_clock, INSERT_VIP 0";
 
     -- AXI rst is active low
     constant C_VGA_RST_POLARITY  : std_logic := '0';
@@ -139,6 +160,17 @@ architecture vga_display_controller_arch of vga_display_controller is
     signal irq_history           : std_logic_vector(15 downto 0);
     signal irq_history_rd_indc   : std_logic;
     signal debug_vector          : std_logic_vector(G_S_AXI_DATA_WIDTH - 1 downto 0);
+    
+    -- AMM bridge signals
+    signal ddr_waitrequest       : std_logic;
+    signal ddr_rd_valid          : std_logic;
+    signal ddr_readdata          : std_logic_vector(C_MST_DWIDTH - 1 downto 0);
+    signal ddr_rd                : std_logic;
+    signal ddr_rd_burst_count    : std_logic_vector(10 downto 0);
+    signal ddr_address           : std_logic_vector(C_MST_AWIDTH - 1 downto 0);
+    signal ddr_read_error        : std_logic;
+    signal ddr_read_error_valid  : std_logic;
+    signal ddr_bridge_read_error : std_logic;
 
     -- FIFO Interface
     signal fifo_pixel_wr_data    : std_logic_vector(C_MST_DWIDTH - 1 downto 0); -- FIFO_WRITE WR_DATA
@@ -161,18 +193,53 @@ architecture vga_display_controller_arch of vga_display_controller is
     end function;
 begin
 
-    gen_reset_n <= axi_slv_aresetn and not reg_display_rst; -- Active LOW
+    gen_reset_n <= aresetn and not reg_display_rst; -- Active LOW
 
     vga_monitor_on <= cpu_monitor_on; -- TODO: Sync!
+    ddr_bridge_read_error <= ddr_read_error and ddr_read_error_valid;
 
     -- Swap byte order from AMM master bridge
     fifo_pixel_wr_data <= (others => '0') when gen_reset_n = C_VGA_RST_POLARITY else swap_bytes(ddr_readdata);
-
+    
+    -- DDR AMM bridge
+    amm_bridge_inst : entity work.amm_bridge
+    generic map(
+        G_ADDR_WIDTH          => C_MST_AWIDTH,
+        G_DATA_WIDTH          => C_MST_DWIDTH
+    )
+    port map(
+        clk                   => s_axi_aclk,
+        aresetn               => gen_reset_n,
+        read_error            => ddr_read_error,
+        read_error_valid      => ddr_read_error_valid,
+        read_error_master_ID  => open,
+        avs_address_s0        => ddr_address,
+        avs_read_s0           => ddr_rd,
+        avs_readdata_s0       => ddr_readdata,
+        avs_readdatavalid_s0  => ddr_rd_valid,
+        avs_waitrequest_s0    => ddr_waitrequest,
+        avs_burstcount_s0     => ddr_rd_burst_count,
+        m_axi_araddr          => axi_mst_araddr,
+        m_axi_arlen           => axi_mst_arlen,
+        m_axi_arsize          => axi_mst_arsize,
+        m_axi_arburst         => axi_mst_arburst,
+        m_axi_arprot          => axi_mst_arprot,
+        m_axi_arcache         => axi_mst_arcache,
+        m_axi_aruser          => axi_mst_aruser,
+        m_axi_arvalid         => axi_mst_arvalid,
+        m_axi_arready         => axi_mst_arready,
+        m_axi_rdata           => axi_mst_rdata,
+        m_axi_rresp           => axi_mst_rresp,
+        m_axi_rlast           => axi_mst_rlast,
+        m_axi_rvalid          => axi_mst_rvalid,
+        m_axi_rready          => axi_mst_rready
+    );
+    
     -- Pixel FIFO
-    pixel_fifo_inst : entity work.pixel_fifo
+    pixel_fifo_inst : entity xil_defaultlib.pixel_fifo
     port map(
         rst         => sync_gen_reset,
-        wr_clk      => axi_slv_aclk,
+        wr_clk      => s_axi_aclk,
         rd_clk      => vga_pixel_clock,
         din         => fifo_pixel_wr_data,
         wr_en       => fifo_pixel_wr_en,
@@ -192,7 +259,7 @@ begin
         G_RST_POLARITY => C_VGA_RST_POLARITY
     )
     port map(
-        clk                        => axi_slv_aclk,
+        clk                        => s_axi_aclk,
         rst                        => gen_reset_n,
         start_display              => reg_start_display,
         new_frame_vga              => cpu_new_frame,
@@ -205,7 +272,7 @@ begin
         vga_status                 => display_status,
         ddr_waitrequest            => ddr_waitrequest,
         ddr_rd_valid               => ddr_rd_valid,
-        ddr_read_error             => ddr_read_error,
+        ddr_read_error             => ddr_bridge_read_error,
         ddr_rd                     => ddr_rd,
         ddr_rd_burst_length        => ddr_rd_burst_count,
         ddr_address                => ddr_address,
@@ -231,8 +298,8 @@ begin
         irq_history         => irq_history,
         irq_history_rd_indc => irq_history_rd_indc,
 
-        S_AXI_ACLK          => axi_slv_aclk,
-        S_AXI_ARESETN       => axi_slv_aresetn,
+        S_AXI_ACLK          => s_axi_aclk,
+        S_AXI_ARESETN       => aresetn,
         S_AXI_AWADDR        => axi_slv_awaddr,
         S_AXI_AWPROT        => axi_slv_awprot,
         S_AXI_AWVALID       => axi_slv_awvalid,
@@ -291,7 +358,7 @@ begin
     )
     port map(
         rst                   => gen_reset_n,
-        clk                   => axi_slv_aclk,
+        clk                   => s_axi_aclk,
         irq_int_modules       => irq_vector,
         irq_history_read_indc => irq_history_rd_indc,
         irq_history           => irq_history,
@@ -299,11 +366,11 @@ begin
     );
 
     -- Image address counter.
-    debug_vector_procss : process(axi_slv_aclk, gen_reset_n)
+    debug_vector_procss : process(s_axi_aclk, gen_reset_n)
     begin
         if gen_reset_n = C_VGA_RST_POLARITY then
             debug_vector <= (others => '0');
-        elsif rising_edge(axi_slv_aclk) then
+        elsif rising_edge(s_axi_aclk) then
             if cpu_new_data_line = '1' then
                 debug_vector(0) <= '1';
             end if;
@@ -325,9 +392,9 @@ begin
     end process;
 
     -- Sync and negate FIFO reset
-    fifo_rst_sync_proc : process(axi_slv_aclk, gen_reset_n)
+    fifo_rst_sync_proc : process(s_axi_aclk, gen_reset_n)
     begin
-        if rising_edge(axi_slv_aclk) then
+        if rising_edge(s_axi_aclk) then
             sync_gen_reset <= not gen_reset_n;
         end if;
     end process;
@@ -339,7 +406,7 @@ begin
     )
     port map(
         clka      => vga_pixel_clock,
-        clkb      => axi_slv_aclk,
+        clkb      => s_axi_aclk,
         rsta      => gen_reset_n,
         rstb      => gen_reset_n,
         pulse_in  => vga_new_data_line,
@@ -353,7 +420,7 @@ begin
     )
     port map(
         clka      => vga_pixel_clock,
-        clkb      => axi_slv_aclk,
+        clkb      => s_axi_aclk,
         rsta      => gen_reset_n,
         rstb      => gen_reset_n,
         pulse_in  => vga_new_frame,
@@ -366,7 +433,7 @@ begin
         G_RST_POLARITY_B => C_VGA_RST_POLARITY
     )
     port map(
-        clka      => axi_slv_aclk,
+        clka      => s_axi_aclk,
         clkb      => vga_pixel_clock,
         rsta      => gen_reset_n,
         rstb      => gen_reset_n,
@@ -381,7 +448,7 @@ begin
     )
     port map(
         clka      => vga_pixel_clock,
-        clkb      => axi_slv_aclk,
+        clkb      => s_axi_aclk,
         rsta      => gen_reset_n,
         rstb      => gen_reset_n,
         pulse_in  => vga_error_sig,

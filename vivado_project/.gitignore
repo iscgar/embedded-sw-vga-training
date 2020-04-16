@@ -87,3 +87,4 @@ mb_vga_system.hw/*
 mb_vga_system.ip_user_files/*
 mb_vga_system.runs/*
 mb_vga_system.sim/*
+mb_vga_system.tmp/*

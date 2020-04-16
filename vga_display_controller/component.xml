@@ -6,54 +6,6 @@
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
-      <spirit:name>axi_slv_aclk</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>CLK</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>axi_slv_aclk</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>ASSOCIATED_RESET</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_SLV_ACLK.ASSOCIATED_RESET">axi_slv_aresetn</spirit:value>
-        </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_SLV_ACLK.ASSOCIATED_BUSIF">S_AXI</spirit:value>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>axi_slv_aresetn</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>axi_slv_aresetn</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.AXI_SLV_ARESETN.POLARITY">ACTIVE_LOW</spirit:value>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
-    <spirit:busInterface>
       <spirit:name>S_AXI</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
@@ -216,62 +168,6 @@
       </spirit:portMaps>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>M_Avalon</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="avalon" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="avalon_rtl" spirit:version="1.0"/>
-      <spirit:master/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>ADDRESS</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ddr_address</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>READDATA</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ddr_readdata</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>READDATAVALID</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ddr_rd_valid</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>WAITREQUEST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ddr_waitrequest</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>READ</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ddr_rd</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>BURSTCOUNT</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>ddr_rd_burst_count</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-    </spirit:busInterface>
-    <spirit:busInterface>
       <spirit:name>vga_pixel_clock</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
@@ -286,6 +182,16 @@
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.VGA_PIXEL_CLOCK.PHASE">0.000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.VGA_PIXEL_CLOCK.INSERT_VIP">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>vga_sys_intr</spirit:name>
@@ -313,7 +219,230 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_BUSIF">M_AXI:S_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_RESET">aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ACLK.PHASE">0.000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.ACLK.INSERT_VIP">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>aresetn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.ARESETN.POLARITY">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.ARESETN.INSERT_VIP">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>M_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:master>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="M_AXI"/>
+      </spirit:master>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARLEN</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arlen</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARSIZE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arsize</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARBURST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arburst</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARCACHE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arcache</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_aruser</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_rlast</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>axi_mst_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s_axi_aclk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_BUSIF">M_AXI:S_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.ASSOCIATED_RESET">aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.PHASE">0.000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S_AXI_ACLK.INSERT_VIP">0</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
   </spirit:busInterfaces>
+  <spirit:addressSpaces>
+    <spirit:addressSpace>
+      <spirit:name>M_AXI</spirit:name>
+      <spirit:range spirit:format="long" spirit:minimum="4096" spirit:rangeType="long">4294967296</spirit:range>
+      <spirit:width spirit:format="long" spirit:resolve="dependent">128</spirit:width>
+    </spirit:addressSpace>
+  </spirit:addressSpaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
       <spirit:name>S_AXI</spirit:name>
@@ -322,6 +451,64 @@
         <spirit:baseAddress spirit:format="long">0</spirit:baseAddress>
         <spirit:range spirit:format="long">4096</spirit:range>
         <spirit:width spirit:format="long">0</spirit:width>
+        <spirit:register>
+          <spirit:name>DISPLAY_MISC_CTRL</spirit:name>
+          <spirit:addressOffset>0</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:volatile>true</spirit:volatile>
+          <spirit:access>read-write</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">1</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>LINE_ADDRESS</spirit:name>
+          <spirit:addressOffset>4</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:volatile>true</spirit:volatile>
+          <spirit:access>read-write</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>IRQ_HISTORY</spirit:name>
+          <spirit:addressOffset>8</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:volatile>true</spirit:volatile>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>DEBUG_VECTOR</spirit:name>
+          <spirit:addressOffset>12</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:volatile>true</spirit:volatile>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>VGA_WIDTH</spirit:name>
+          <spirit:addressOffset>16</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
+        <spirit:register>
+          <spirit:name>VGA_HEIGHT</spirit:name>
+          <spirit:addressOffset>20</spirit:addressOffset>
+          <spirit:size spirit:format="long">32</spirit:size>
+          <spirit:access>read-only</spirit:access>
+          <spirit:reset>
+            <spirit:value spirit:format="long">0</spirit:value>
+          </spirit:reset>
+        </spirit:register>
       </spirit:addressBlock>
     </spirit:memoryMap>
   </spirit:memoryMaps>
@@ -337,12 +524,15 @@
           <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_xilinx_com_ip_amm_axi_bridge_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>588ec6e0</spirit:value>
+            <spirit:value>16f6b69b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -356,12 +546,15 @@
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_fifo_generator_13_2__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_amm_axi_bridge_1_0__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>588ec6e0</spirit:value>
+            <spirit:value>16f6b69b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -382,7 +575,7 @@
     </spirit:views>
     <spirit:ports>
       <spirit:port>
-        <spirit:name>axi_slv_aclk</spirit:name>
+        <spirit:name>s_axi_aclk</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -395,7 +588,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>axi_slv_aresetn</spirit:name>
+        <spirit:name>aresetn</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -724,7 +917,139 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ddr_waitrequest</spirit:name>
+        <spirit:name>axi_mst_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arlen</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">7</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arsize</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arburst</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arcache</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_aruser</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_arready</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -740,23 +1065,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ddr_rd_valid</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-          <spirit:driver>
-            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
-          </spirit:driver>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>ddr_readdata</spirit:name>
+        <spirit:name>axi_mst_rdata</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -776,9 +1085,29 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ddr_rd</spirit:name>
+        <spirit:name>axi_mst_rresp</spirit:name>
         <spirit:wire>
-          <spirit:direction>out</spirit:direction>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_rlast</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
@@ -786,46 +1115,31 @@
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>ddr_rd_burst_count</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">10</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>ddr_address</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>ddr_read_error</spirit:name>
+        <spirit:name>axi_mst_rvalid</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+          <spirit:driver>
+            <spirit:defaultValue spirit:format="long">0</spirit:defaultValue>
+          </spirit:driver>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>axi_mst_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
@@ -977,6 +1291,34 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/amm_bridge/amm_axi_bridge_v1_0_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/common/amm_bridge.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_cdc_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_pkg_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_srl_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/axi_datamover_v5_1_vh_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/common/irq_sender.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
@@ -1011,7 +1353,7 @@
       <spirit:file>
         <spirit:name>hdl/vga_display_controller.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_264b7dec</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_d35d6c08</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1019,6 +1361,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="13.2">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_amm_axi_bridge_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="amm_axi_bridge" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1029,6 +1381,34 @@
       <spirit:file>
         <spirit:name>hdl/pixel_fifo/pixel_fifo.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/amm_axi_bridge_v1_0_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/common/amm_bridge.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_cdc_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_pkg_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/lib_srl_fifo_v1_0_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/amm_bridge/axi_datamover_v5_1_vh_rfs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/common/irq_sender.vhd</spirit:name>
@@ -1072,6 +1452,16 @@
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
           <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="fifo_generator" xilinx:version="13.2">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_amm_axi_bridge_1_0__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="amm_axi_bridge" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1117,26 +1507,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:supportedFamilies>
-        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
-        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
@@ -1148,12 +1519,12 @@
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>matzov.idf:user:vga_display_controller:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>matzov:user:vga_display_controller:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2020-04-16T08:14:08Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-04-16T17:10:29Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="matzov.idf:user:vga_display_controller:1.0_ARCHIVE_LOCATION">d:/projects/isaacg/vga-training/vga_display_controller</xilinx:tag>
@@ -1374,14 +1745,263 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae54656_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@28e54d16_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@625a0e9e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10771d6a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4263ee57_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@746e7656_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c508c79_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66c49df5_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@229df197_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27d1e0ff_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33401819_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed5877c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cd12df_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68c7a4c1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43e1a832_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6db9cdbe_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8c564aa_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60ac5d54_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24723574_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@529abcb8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43d41cd0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a87e84e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1933a633_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb7bbbe_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7099adca_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d40f22e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fbd478e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74c1706_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a80323_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627025e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a763fe_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cf205db_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44b0c882_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@775ba4a1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@166485be_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c8f9c4b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e8d7841_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15ee1026_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@220b6e3d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1852f6d4_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63f76c51_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f7df459_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47384d4e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a347794_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@291c0b6b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ace4a07_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@556c4893_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9b40a09_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50f89b6c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18e4e00f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63decfff_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f1bde8d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f3e057d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10aea1f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@195d66f7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@695051f0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59cd78a2_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e5d68f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dda761b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70eaad8d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20d3be30_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c0cbbc7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2684ca25_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f098ec0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b627c52_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50afa4c3_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@376ea47c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4afc99_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a5a608_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37fcaf34_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30ac9d9a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361ac2ee_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35c2aaf7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fad22b9_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea51244_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51ee092c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317bc43d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f06b6f0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e2f101_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29b6edb9_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50231137_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37052e56_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@292abbdc_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed78794_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c924f3a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a4dec13_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c8ba63e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@988370f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38d07f68_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16b35e5_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47f1a7a8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d25b42d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0aa8e6_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@424a08b2_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d66706e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@909b895_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7d8b5_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c8468b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@590814c4_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b2bd99a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10a7e537_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@424c2e3c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b027745_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d196e00_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc587e8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e7fbc32_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a2d028f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e3a300b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7be876d7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ab76c0f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37dd025_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361a914d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f11c6e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32cef3a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@470aa778_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bc5f92a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78ce712a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac73bd1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@522d0bf4_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ea2579_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce86680_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7598f8c8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d3e90f1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e47acf3_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a13f9a8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55a30b73_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21648fb7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b71b5b2_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72470df6_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a747f60_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4758930e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68c7f7b0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c5ca338_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f172334_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a04667a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ec6a30_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54da8613_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3aa29e15_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47c6f0d6_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d0968_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@643d224f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ffe4c41_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f1d507_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34f2f7f8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71df58c1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@612f2f12_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@765ae16c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ddce58_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385bba2d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cca6cbf_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@594ed964_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f12918_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54785978_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e184df_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52c53670_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55526bb1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bc802a4_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1664f178_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@255f3bef_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e795f71_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36dd80ac_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20dd6a39_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197b1ab1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e4b50d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@357ca227_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3beebd48_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a428489_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c26d16e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73a1b456_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f322f0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5117c89c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a03fd6_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c539736_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29a9dab9_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@226d76be_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1725efdc_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e4f314f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5defe352_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37316c5f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1809c69e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb3f81a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@392ea0df_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@478a3659_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70dde880_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5185126c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@227cf766_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e7876c9_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39590392_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1608b4cb_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e97b175_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51098d5b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ce156b5_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30b7cf97_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@449ca2c0_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44b1f00f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76c15793_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c1d9979_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cb93415_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c053d78_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79589997_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f5efe_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fb11e70_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2444b486_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40540940_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2abd8c49_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7da5533a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@660a6898_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19d54048_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b397f17_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e25be47_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc56700_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aefcbbb_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c7483d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@391b61f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2857ee1c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34c2cdd8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a6ae434_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68c9889c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c5cdc79_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5059ce05_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1236299d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d4fa49_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0824fc_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@598cf34f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a1ef209_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@764a0ea6_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d516334_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0fbcf1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c870fbd_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@423d8eb8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a685f66_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@325a9085_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68e1eed7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dbbcef7_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@593b268d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b925e0a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b9b561b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ee2593a_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@299fb55f_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d45c09d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@626af372_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@764c2291_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56dd1090_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197e4421_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3311cb76_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@226cc169_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d0d265c_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36a4c617_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45dc9c22_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dadda3d_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20ba48e8_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="56882f50"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="e2f959a6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2f2d6fa4"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="093515d1"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="99053a87"/>
+      <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="d93de70f"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="787656f9"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bbd917cb"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="45762990"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="27487382"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c23424cc"/>
     </xilinx:packagingInfo>
