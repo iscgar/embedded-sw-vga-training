@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.2.1 (win64) Build 2729669 Thu Dec  5 04:49:17 MST 2019
---Date        : Thu Apr 16 10:33:31 2020
+--Date        : Thu Apr 16 11:23:27 2020
 --Host        : EF65AC789B8C running 64-bit major release  (build 9200)
 --Command     : generate_target vga_mb_system_wrapper.bd
 --Design      : vga_mb_system_wrapper
@@ -45,8 +45,8 @@ entity vga_mb_system_wrapper is
     qspi_io3_io : inout STD_LOGIC;
     qspi_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     rgb_leds_tri_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    seven_seg_an_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    seven_seg_disp_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    seven_seg_an : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    seven_seg_disp : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sys_clock : in STD_LOGIC;
     sys_reset : in STD_LOGIC;
     usb_uart_rxd : in STD_LOGIC;
@@ -71,35 +71,6 @@ architecture STRUCTURE of vga_mb_system_wrapper is
     vga_v_sync : out STD_LOGIC;
     eth_phy_refclk : out STD_LOGIC;
     eth_rstn : out STD_LOGIC_VECTOR ( 0 to 0 );
-    leds_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    usb_uart_rxd : in STD_LOGIC;
-    usb_uart_txd : out STD_LOGIC;
-    eth_mdio_mdc : out STD_LOGIC;
-    eth_mdio_mdio_i : in STD_LOGIC;
-    eth_mdio_mdio_o : out STD_LOGIC;
-    eth_mdio_mdio_t : out STD_LOGIC;
-    eth_phy_crs_dv : in STD_LOGIC;
-    eth_phy_rx_er : in STD_LOGIC;
-    eth_phy_rxd : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    eth_phy_tx_en : out STD_LOGIC;
-    eth_phy_txd : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    seven_seg_disp_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    ddr2_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
-    ddr2_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-    ddr2_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-    ddr2_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
-    ddr2_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    ddr2_ras_n : out STD_LOGIC;
-    ddr2_cas_n : out STD_LOGIC;
-    ddr2_we_n : out STD_LOGIC;
-    ddr2_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr2_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr2_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr2_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr2_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    ddr2_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
-    seven_seg_an_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    rgb_leds_tri_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
     qspi_io0_i : in STD_LOGIC;
     qspi_io0_o : out STD_LOGIC;
     qspi_io0_t : out STD_LOGIC;
@@ -115,8 +86,37 @@ architecture STRUCTURE of vga_mb_system_wrapper is
     qspi_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     qspi_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     qspi_ss_t : out STD_LOGIC;
+    rgb_leds_tri_o : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    ddr2_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
+    ddr2_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+    ddr2_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+    ddr2_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    ddr2_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    ddr2_ras_n : out STD_LOGIC;
+    ddr2_cas_n : out STD_LOGIC;
+    ddr2_we_n : out STD_LOGIC;
+    ddr2_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr2_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr2_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr2_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr2_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    ddr2_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
+    leds_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    eth_mdio_mdc : out STD_LOGIC;
+    eth_mdio_mdio_i : in STD_LOGIC;
+    eth_mdio_mdio_o : out STD_LOGIC;
+    eth_mdio_mdio_t : out STD_LOGIC;
+    eth_phy_crs_dv : in STD_LOGIC;
+    eth_phy_rx_er : in STD_LOGIC;
+    eth_phy_rxd : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    eth_phy_tx_en : out STD_LOGIC;
+    eth_phy_txd : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    usb_uart_rxd : in STD_LOGIC;
+    usb_uart_txd : out STD_LOGIC;
+    dip_switches_tri_i : in STD_LOGIC_VECTOR ( 15 downto 0 );
     push_btns_tri_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    dip_switches_tri_i : in STD_LOGIC_VECTOR ( 15 downto 0 )
+    seven_seg_an : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    seven_seg_disp : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component vga_mb_system;
   component IOBUF is
@@ -235,8 +235,8 @@ vga_mb_system_i: component vga_mb_system
       qspi_ss_o(0) => qspi_ss_o_0(0),
       qspi_ss_t => qspi_ss_t,
       rgb_leds_tri_o(5 downto 0) => rgb_leds_tri_o(5 downto 0),
-      seven_seg_an_tri_o(7 downto 0) => seven_seg_an_tri_o(7 downto 0),
-      seven_seg_disp_tri_o(7 downto 0) => seven_seg_disp_tri_o(7 downto 0),
+      seven_seg_an(7 downto 0) => seven_seg_an(7 downto 0),
+      seven_seg_disp(7 downto 0) => seven_seg_disp(7 downto 0),
       sys_clock => sys_clock,
       sys_reset => sys_reset,
       usb_uart_rxd => usb_uart_rxd,

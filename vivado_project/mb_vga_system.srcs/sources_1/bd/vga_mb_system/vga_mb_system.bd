@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x406BD77374796E2A",
+      "boundary_crc": "0x4A1BA7FB83ED5CC5",
       "device": "xc7a100tcsg324-1",
       "name": "vga_mb_system",
       "synth_flow_mode": "Hierarchical",
@@ -49,7 +49,9 @@
       "sys_timer": "",
       "ethernet": "",
       "mii_to_rmii": "",
-      "vga_display_ctrl_slave": ""
+      "vga_display_ctrl_slave": "",
+      "seven_seg_an_inverter": "",
+      "seven_seg_disp_inverter": ""
     },
     "interface_ports": {
       "usb_uart": {
@@ -75,14 +77,6 @@
       "qspi": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:spi_rtl:1.0"
-      },
-      "seven_seg_an": {
-        "mode": "Master",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
-      },
-      "seven_seg_disp": {
-        "mode": "Master",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       },
       "ddr2": {
         "mode": "Master",
@@ -252,6 +246,16 @@
             "value_src": "const_prop"
           }
         }
+      },
+      "seven_seg_an": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "seven_seg_disp": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
       }
     },
     "components": {
@@ -359,16 +363,16 @@
           }
         },
         "interface_nets": {
-          "microblaze_0_dlmb_bus": {
-            "interface_ports": [
-              "dlmb_v10/LMB_Sl_0",
-              "dlmb_bram_if_cntlr/SLMB"
-            ]
-          },
           "microblaze_0_ilmb": {
             "interface_ports": [
               "ILMB",
               "ilmb_v10/LMB_M"
+            ]
+          },
+          "microblaze_0_dlmb_bus": {
+            "interface_ports": [
+              "dlmb_v10/LMB_Sl_0",
+              "dlmb_bram_if_cntlr/SLMB"
             ]
           },
           "microblaze_0_dlmb": {
@@ -758,16 +762,16 @@
               }
             },
             "interface_nets": {
-              "s01_couplers_to_s01_data_fifo": {
-                "interface_ports": [
-                  "S_AXI",
-                  "s01_data_fifo/S_AXI"
-                ]
-              },
               "s01_data_fifo_to_s01_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "s01_data_fifo/M_AXI"
+                ]
+              },
+              "s01_couplers_to_s01_data_fifo": {
+                "interface_ports": [
+                  "S_AXI",
+                  "s01_data_fifo/S_AXI"
                 ]
               }
             },
@@ -880,24 +884,6 @@
           }
         },
         "interface_nets": {
-          "axi_intercon_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "m00_couplers_to_axi_intercon": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
           "axi_intercon_to_s01_couplers": {
             "interface_ports": [
               "S01_AXI",
@@ -908,6 +894,24 @@
             "interface_ports": [
               "s01_couplers/M_AXI",
               "xbar/S01_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_intercon": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "axi_intercon_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1115,10 +1119,7 @@
             "value": "2048"
           },
           "C_DCACHE_ADDR_TAG": {
-            "value": "16"
-          },
-          "C_DCACHE_BYTE_SIZE": {
-            "value": "2048"
+            "value": "0"
           },
           "C_DEBUG_ENABLED": {
             "value": "1"
@@ -1139,7 +1140,7 @@
             "value": "1"
           },
           "C_USE_DCACHE": {
-            "value": "1"
+            "value": "0"
           },
           "C_USE_ICACHE": {
             "value": "1"
@@ -1281,7 +1282,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1305,7 +1306,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1329,7 +1330,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1353,7 +1354,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1377,7 +1378,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1401,7 +1402,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1425,7 +1426,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1449,7 +1450,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1473,7 +1474,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1497,7 +1498,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1521,7 +1522,7 @@
                 "value": "2"
               },
               "NUM_WRITE_OUTSTANDING": {
-                "value": "32"
+                "value": "2"
               },
               "RUSER_BITS_PER_BYTE": {
                 "value": "0"
@@ -1581,13 +1582,31 @@
       "vga_display_ctrl_slave": {
         "vlnv": "example:user:vga_display_controller:1.0",
         "xci_name": "vga_mb_system_vga_display_controll_0_0"
+      },
+      "seven_seg_an_inverter": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "vga_mb_system_util_vector_logic_0_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          }
+        }
+      },
+      "seven_seg_disp_inverter": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "vga_mb_system_util_vector_logic_0_2",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          }
+        }
       }
     },
     "interface_nets": {
-      "axi_quad_spi_0_SPI_0": {
+      "rgb_leds_6bits_GPIO": {
         "interface_ports": [
-          "qspi",
-          "flash/SPI_0"
+          "rgb_leds",
+          "rgb_leds_6bits/GPIO"
         ]
       },
       "axi_smc_M07_AXI": {
@@ -1596,22 +1615,16 @@
           "axi_intc_0/s_axi"
         ]
       },
-      "rgb_leds_6bits_GPIO": {
-        "interface_ports": [
-          "rgb_leds",
-          "rgb_leds_6bits/GPIO"
-        ]
-      },
-      "seven_seg_8bits_GPIO2": {
-        "interface_ports": [
-          "seven_seg_an",
-          "seven_seg_8bits/GPIO2"
-        ]
-      },
       "microblaze_0_ilmb_1": {
         "interface_ports": [
           "microblaze_0/ILMB",
           "microblaze_0_local_memory/ILMB"
+        ]
+      },
+      "axi_quad_spi_0_SPI_0": {
+        "interface_ports": [
+          "qspi",
+          "flash/SPI_0"
         ]
       },
       "mig_7series_0_DDR2": {
@@ -1620,34 +1633,10 @@
           "mig_7series_0/DDR2"
         ]
       },
-      "dips_leds_16bits_GPIO2": {
+      "axi_smc_M08_AXI": {
         "interface_ports": [
-          "leds",
-          "dips_leds_16bits/GPIO2"
-        ]
-      },
-      "axi_smc_M02_AXI": {
-        "interface_ports": [
-          "axi_smc/M02_AXI",
-          "dips_leds_16bits/S_AXI"
-        ]
-      },
-      "microblaze_0_M_AXI_DC": {
-        "interface_ports": [
-          "microblaze_0/M_AXI_DC",
-          "axi_smc/S01_AXI"
-        ]
-      },
-      "microblaze_0_M_AXI_DP": {
-        "interface_ports": [
-          "microblaze_0/M_AXI_DP",
-          "axi_smc/S00_AXI"
-        ]
-      },
-      "ethernet_MDIO": {
-        "interface_ports": [
-          "eth_mdio",
-          "ethernet/MDIO"
+          "axi_smc/M08_AXI",
+          "vga_display_ctrl_slave/S_AXI"
         ]
       },
       "mii_to_rmii_0_RMII_PHY_M": {
@@ -1656,64 +1645,10 @@
           "mii_to_rmii/RMII_PHY_M"
         ]
       },
-      "axi_smc_M10_AXI": {
-        "interface_ports": [
-          "axi_smc/M10_AXI",
-          "ethernet/S_AXI"
-        ]
-      },
-      "axi_smc_M06_AXI": {
-        "interface_ports": [
-          "axi_smc/M06_AXI",
-          "usb_uart/S_AXI"
-        ]
-      },
-      "axi_interconnect_0_M00_AXI": {
-        "interface_ports": [
-          "axi_intercon/M00_AXI",
-          "mig_7series_0/S_AXI"
-        ]
-      },
-      "axi_smc_M04_AXI": {
-        "interface_ports": [
-          "axi_smc/M04_AXI",
-          "seven_seg_8bits/S_AXI"
-        ]
-      },
       "axi_smc_M05_AXI": {
         "interface_ports": [
           "axi_smc/M05_AXI",
           "flash/AXI_LITE"
-        ]
-      },
-      "axi_uartlite_0_UART": {
-        "interface_ports": [
-          "usb_uart",
-          "usb_uart/UART"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "axi_intercon/S01_AXI"
-        ]
-      },
-      "seven_seg_8bits_GPIO": {
-        "interface_ports": [
-          "seven_seg_disp",
-          "seven_seg_8bits/GPIO"
-        ]
-      },
-      "ethernet_MII": {
-        "interface_ports": [
-          "ethernet/MII",
-          "mii_to_rmii/MII"
-        ]
-      },
-      "axi_smc_M09_AXI": {
-        "interface_ports": [
-          "axi_smc/M09_AXI",
-          "sys_timer/S_AXI"
         ]
       },
       "axi_intc_0_interrupt": {
@@ -1722,22 +1657,16 @@
           "microblaze_0/INTERRUPT"
         ]
       },
-      "dips_leds_16bits_GPIO": {
+      "ethernet_MDIO": {
         "interface_ports": [
-          "dip_switches",
-          "dips_leds_16bits/GPIO"
+          "eth_mdio",
+          "ethernet/MDIO"
         ]
       },
       "axi_smc_M03_AXI": {
         "interface_ports": [
           "axi_smc/M03_AXI",
           "push_btns_5bits/S_AXI"
-        ]
-      },
-      "vga_display_ctrl_slave_M_AVALON": {
-        "interface_ports": [
-          "vga_display_ctrl_slave/M_Avalon",
-          "vga_amm_bridge/Avalon_S0"
         ]
       },
       "microblaze_0_debug": {
@@ -1752,10 +1681,10 @@
           "microblaze_0_local_memory/DLMB"
         ]
       },
-      "microblaze_0_M_AXI_IC": {
+      "axi_smc_M10_AXI": {
         "interface_ports": [
-          "microblaze_0/M_AXI_IC",
-          "axi_smc/S02_AXI"
+          "axi_smc/M10_AXI",
+          "ethernet/S_AXI"
         ]
       },
       "S00_AXI_1": {
@@ -1764,22 +1693,94 @@
           "vga_amm_bridge/M_AXI"
         ]
       },
-      "push_btns_5bits_GPIO": {
-        "interface_ports": [
-          "push_btns",
-          "push_btns_5bits/GPIO"
-        ]
-      },
       "axi_smc_M01_AXI": {
         "interface_ports": [
           "axi_smc/M01_AXI",
           "rgb_leds_6bits/S_AXI"
         ]
       },
-      "axi_smc_M08_AXI": {
+      "axi_interconnect_0_M00_AXI": {
         "interface_ports": [
-          "axi_smc/M08_AXI",
-          "vga_display_ctrl_slave/S_AXI"
+          "axi_intercon/M00_AXI",
+          "mig_7series_0/S_AXI"
+        ]
+      },
+      "axi_smc_M04_AXI": {
+        "interface_ports": [
+          "axi_smc/M04_AXI",
+          "seven_seg_8bits/S_AXI"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "axi_intercon/S01_AXI"
+        ]
+      },
+      "dips_leds_16bits_GPIO2": {
+        "interface_ports": [
+          "leds",
+          "dips_leds_16bits/GPIO2"
+        ]
+      },
+      "ethernet_MII": {
+        "interface_ports": [
+          "ethernet/MII",
+          "mii_to_rmii/MII"
+        ]
+      },
+      "axi_smc_M09_AXI": {
+        "interface_ports": [
+          "axi_smc/M09_AXI",
+          "sys_timer/S_AXI"
+        ]
+      },
+      "axi_smc_M06_AXI": {
+        "interface_ports": [
+          "axi_smc/M06_AXI",
+          "usb_uart/S_AXI"
+        ]
+      },
+      "axi_uartlite_0_UART": {
+        "interface_ports": [
+          "usb_uart",
+          "usb_uart/UART"
+        ]
+      },
+      "axi_smc_M02_AXI": {
+        "interface_ports": [
+          "axi_smc/M02_AXI",
+          "dips_leds_16bits/S_AXI"
+        ]
+      },
+      "vga_display_ctrl_slave_M_AVALON": {
+        "interface_ports": [
+          "vga_display_ctrl_slave/M_Avalon",
+          "vga_amm_bridge/Avalon_S0"
+        ]
+      },
+      "microblaze_0_M_AXI_DP": {
+        "interface_ports": [
+          "microblaze_0/M_AXI_DP",
+          "axi_smc/S00_AXI"
+        ]
+      },
+      "dips_leds_16bits_GPIO": {
+        "interface_ports": [
+          "dip_switches",
+          "dips_leds_16bits/GPIO"
+        ]
+      },
+      "push_btns_5bits_GPIO": {
+        "interface_ports": [
+          "push_btns",
+          "push_btns_5bits/GPIO"
+        ]
+      },
+      "microblaze_0_M_AXI_IC": {
+        "interface_ports": [
+          "microblaze_0/M_AXI_IC",
+          "axi_smc/S02_AXI"
         ]
       }
     },
@@ -2019,6 +2020,30 @@
         "ports": [
           "clk_wiz_1/clk_out5",
           "eth_phy_refclk"
+        ]
+      },
+      "seven_seg_an_inverter_Res": {
+        "ports": [
+          "seven_seg_an_inverter/Res",
+          "seven_seg_an"
+        ]
+      },
+      "seven_seg_8bits_gpio2_io_o": {
+        "ports": [
+          "seven_seg_8bits/gpio2_io_o",
+          "seven_seg_an_inverter/Op1"
+        ]
+      },
+      "seven_seg_disp_inverter_Res": {
+        "ports": [
+          "seven_seg_disp_inverter/Res",
+          "seven_seg_disp"
+        ]
+      },
+      "seven_seg_8bits_gpio_io_o": {
+        "ports": [
+          "seven_seg_8bits/gpio_io_o",
+          "seven_seg_disp_inverter/Op1"
         ]
       }
     },

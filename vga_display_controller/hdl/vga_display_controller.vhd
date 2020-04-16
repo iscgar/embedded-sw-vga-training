@@ -147,13 +147,26 @@ architecture vga_display_controller_arch of vga_display_controller is
     signal fifo_pixel_rd_en      : std_logic; -- FIFO_READ RD_EN
     signal fifo_rd_data_valid    : std_logic;
     signal fifo_almost_full      : std_logic;
+
+    -- Changes the byte endianness BIG <-> LITTLE
+    function swap_bytes(vec : std_logic_vector) return std_logic_vector is
+        variable swapped     : std_logic_vector(vec'range);
+        constant bytes_count : natural := vec'length / 8;
+    begin
+        assert (bytes_count * 8 = vec'length) report "swap_bytes() only works with 8-bit bytes" severity failure;
+        for i in 0 to (bytes_count - 1) loop
+            swapped(((i + 1) * 8) - 1 downto (i * 8)) := vec(((bytes_count - i) * 8) - 1 downto ((bytes_count - i - 1) * 8));
+        end loop;
+        return swapped;
+    end function;
 begin
 
     gen_reset_n <= axi_slv_aresetn and not reg_display_rst; -- Active LOW
 
     vga_monitor_on <= cpu_monitor_on; -- TODO: Sync!
 
-    fifo_pixel_wr_data <= (others => '0') when gen_reset_n = C_VGA_RST_POLARITY else ddr_readdata;
+    -- Swap byte order from AMM master bridge
+    fifo_pixel_wr_data <= (others => '0') when gen_reset_n = C_VGA_RST_POLARITY else swap_bytes(ddr_readdata);
 
     -- Pixel FIFO
     pixel_fifo_inst : entity work.pixel_fifo

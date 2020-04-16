@@ -26558,7 +26558,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:45fa0580</spirit:value>
+            <spirit:value>9:9a9057f9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26572,11 +26572,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:28 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:54 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:45fa0580</spirit:value>
+            <spirit:value>9:9a9057f9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26592,11 +26592,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:28 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:54 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:45fa0580</spirit:value>
+            <spirit:value>9:9a9057f9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26631,7 +26631,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26b09f29</spirit:value>
+            <spirit:value>9:ee3ee309</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26647,11 +26647,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:28 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:54 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:26b09f29</spirit:value>
+            <spirit:value>9:ee3ee309</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -26665,11 +26665,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:37:34 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:25:06 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:45fa0580</spirit:value>
+            <spirit:value>9:9a9057f9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -28838,7 +28838,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_WRITE_ACCEPTANCE</spirit:name>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_WRITE_ACCEPTANCE" spirit:bitStringLength="64">0x0000002000000002</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXI_WRITE_ACCEPTANCE" spirit:bitStringLength="64">0x0000000200000002</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXI_READ_ACCEPTANCE</spirit:name>
@@ -35745,7 +35745,7 @@
     <spirit:parameter>
       <spirit:name>S01_WRITE_ACCEPTANCE</spirit:name>
       <spirit:displayName>My S01_WRITE_ACCEPTANCE</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S01_WRITE_ACCEPTANCE" spirit:order="550" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S01_WRITE_ACCEPTANCE" spirit:order="550" spirit:minimum="1" spirit:maximum="32" spirit:rangeType="long">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

@@ -40,13 +40,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="46"/>
-    <Option Name="WTModelSimExportSim" Val="46"/>
-    <Option Name="WTQuestaExportSim" Val="46"/>
-    <Option Name="WTIesExportSim" Val="46"/>
-    <Option Name="WTVcsExportSim" Val="46"/>
-    <Option Name="WTRivieraExportSim" Val="46"/>
-    <Option Name="WTActivehdlExportSim" Val="46"/>
+    <Option Name="WTXSimExportSim" Val="47"/>
+    <Option Name="WTModelSimExportSim" Val="47"/>
+    <Option Name="WTQuestaExportSim" Val="47"/>
+    <Option Name="WTIesExportSim" Val="47"/>
+    <Option Name="WTVcsExportSim" Val="47"/>
+    <Option Name="WTRivieraExportSim" Val="47"/>
+    <Option Name="WTActivehdlExportSim" Val="47"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -68,101 +68,96 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_auto_cc_0/vga_mb_system_auto_cc_0.xci">
-          <Proxy FileSetName="vga_mb_system_auto_cc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_s01_data_fifo_0/vga_mb_system_s01_data_fifo_0.xci">
-          <Proxy FileSetName="vga_mb_system_s01_data_fifo_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_s00_data_fifo_0/vga_mb_system_s00_data_fifo_0.xci">
-          <Proxy FileSetName="vga_mb_system_s00_data_fifo_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_uartlite_0_1/vga_mb_system_axi_uartlite_0_1.xci">
-          <Proxy FileSetName="vga_mb_system_axi_uartlite_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_vga_display_controll_0_0/vga_mb_system_vga_display_controll_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_vga_display_controll_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_microblaze_0_0/vga_mb_system_microblaze_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_util_ds_buf_0_0/vga_mb_system_util_ds_buf_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_util_ds_buf_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_lmb_bram_0/vga_mb_system_lmb_bram_0.xci">
-          <Proxy FileSetName="vga_mb_system_lmb_bram_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_amm_axi_bridge_0_0/vga_mb_system_amm_axi_bridge_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_amm_axi_bridge_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_rst_clk_wiz_1_100M_1/vga_mb_system_rst_clk_wiz_1_100M_1.xci">
-          <Proxy FileSetName="vga_mb_system_rst_clk_wiz_1_100M_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_mig_7series_0_1/vga_mb_system_mig_7series_0_1.xci">
-          <Proxy FileSetName="vga_mb_system_mig_7series_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_intc_0_1/vga_mb_system_axi_intc_0_1.xci">
-          <Proxy FileSetName="vga_mb_system_axi_intc_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_util_vector_logic_0_0/vga_mb_system_util_vector_logic_0_0.xci">
           <Proxy FileSetName="vga_mb_system_util_vector_logic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_dlmb_v10_0/vga_mb_system_dlmb_v10_0.xci">
-          <Proxy FileSetName="vga_mb_system_dlmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_clk_wiz_1_1/vga_mb_system_clk_wiz_1_1.xci">
-          <Proxy FileSetName="vga_mb_system_clk_wiz_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_1/vga_mb_system_axi_gpio_0_1.xci">
-          <Proxy FileSetName="vga_mb_system_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_3/vga_mb_system_axi_gpio_0_3.xci">
           <Proxy FileSetName="vga_mb_system_axi_gpio_0_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_0/vga_mb_system_axi_gpio_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_quad_spi_0_0/vga_mb_system_axi_quad_spi_0_0.xci">
           <Proxy FileSetName="vga_mb_system_axi_quad_spi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_intc_0_1/vga_mb_system_axi_intc_0_1.xci">
+          <Proxy FileSetName="vga_mb_system_axi_intc_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_rst_clk_wiz_1_100M_1/vga_mb_system_rst_clk_wiz_1_100M_1.xci">
+          <Proxy FileSetName="vga_mb_system_rst_clk_wiz_1_100M_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_ilmb_v10_0/vga_mb_system_ilmb_v10_0.xci">
           <Proxy FileSetName="vga_mb_system_ilmb_v10_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_dlmb_bram_if_cntlr_0/vga_mb_system_dlmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="vga_mb_system_dlmb_bram_if_cntlr_0"/>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_vga_display_controll_0_0/vga_mb_system_vga_display_controll_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_vga_display_controll_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_2/vga_mb_system_axi_gpio_0_2.xci">
-          <Proxy FileSetName="vga_mb_system_axi_gpio_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_ilmb_bram_if_cntlr_0/vga_mb_system_ilmb_bram_if_cntlr_0.xci">
-          <Proxy FileSetName="vga_mb_system_ilmb_bram_if_cntlr_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_proc_sys_reset_0_0/vga_mb_system_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_xbar_0/vga_mb_system_xbar_0.xci">
-          <Proxy FileSetName="vga_mb_system_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_clk_wiz_1_1/vga_mb_system_clk_wiz_1_1.xci">
+          <Proxy FileSetName="vga_mb_system_clk_wiz_1_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_smartconnect_0_0/vga_mb_system_smartconnect_0_0.xci">
           <Proxy FileSetName="vga_mb_system_smartconnect_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_proc_sys_reset_0_0/vga_mb_system_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_uartlite_0_1/vga_mb_system_axi_uartlite_0_1.xci">
+          <Proxy FileSetName="vga_mb_system_axi_uartlite_0_1"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_ethernetlite_0_0/vga_mb_system_axi_ethernetlite_0_0.xci">
           <Proxy FileSetName="vga_mb_system_axi_ethernetlite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_mii_to_rmii_0_0/vga_mb_system_mii_to_rmii_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_mii_to_rmii_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_timer_0_0/vga_mb_system_axi_timer_0_0.xci">
-          <Proxy FileSetName="vga_mb_system_axi_timer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_mdm_1_0/vga_mb_system_mdm_1_0.xci">
           <Proxy FileSetName="vga_mb_system_mdm_1_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_util_ds_buf_0_0/vga_mb_system_util_ds_buf_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_util_ds_buf_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_timer_0_0/vga_mb_system_axi_timer_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_axi_timer_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_mig_7series_0_1/vga_mb_system_mig_7series_0_1.xci">
+          <Proxy FileSetName="vga_mb_system_mig_7series_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_lmb_bram_0/vga_mb_system_lmb_bram_0.xci">
+          <Proxy FileSetName="vga_mb_system_lmb_bram_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_0/vga_mb_system_axi_gpio_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_1/vga_mb_system_axi_gpio_0_1.xci">
+          <Proxy FileSetName="vga_mb_system_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_dlmb_bram_if_cntlr_0/vga_mb_system_dlmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="vga_mb_system_dlmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_ilmb_bram_if_cntlr_0/vga_mb_system_ilmb_bram_if_cntlr_0.xci">
+          <Proxy FileSetName="vga_mb_system_ilmb_bram_if_cntlr_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_mii_to_rmii_0_0/vga_mb_system_mii_to_rmii_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_mii_to_rmii_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_microblaze_0_0/vga_mb_system_microblaze_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_microblaze_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_xbar_0/vga_mb_system_xbar_0.xci">
+          <Proxy FileSetName="vga_mb_system_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_amm_axi_bridge_0_0/vga_mb_system_amm_axi_bridge_0_0.xci">
+          <Proxy FileSetName="vga_mb_system_amm_axi_bridge_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_axi_gpio_0_2/vga_mb_system_axi_gpio_0_2.xci">
+          <Proxy FileSetName="vga_mb_system_axi_gpio_0_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_dlmb_v10_0/vga_mb_system_dlmb_v10_0.xci">
+          <Proxy FileSetName="vga_mb_system_dlmb_v10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_util_vector_logic_0_1/vga_mb_system_util_vector_logic_0_1.xci">
+          <Proxy FileSetName="vga_mb_system_util_vector_logic_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vga_mb_system.bd" FileRelPathName="ip/vga_mb_system_util_vector_logic_0_2/vga_mb_system_util_vector_logic_0_2.xci">
+          <Proxy FileSetName="vga_mb_system_util_vector_logic_0_2"/>
+        </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/hdl/vga_mb_system_wrapper.vhd">
+      <File Path="$PSRCDIR/sources_1/bd/vga_mb_system/hdl/vga_mb_system_wrapper.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/bd/vga_mb_system/hdl/vga_mb_system_wrapper.vhd"/>
-          <Attr Name="ImportTime" Val="1586253452"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -287,12 +282,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="vga_mb_system_vga_display_controll_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_vga_display_controll_0_0">
-      <Config>
-        <Option Name="TopModule" Val="vga_mb_system_vga_display_controll_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="vga_mb_system_axi_intc_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_axi_intc_0_1">
       <Config>
         <Option Name="TopModule" Val="vga_mb_system_axi_intc_0_1"/>
@@ -371,21 +360,21 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="vga_mb_system_s00_data_fifo_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_s00_data_fifo_0">
+    <FileSet Name="vga_mb_system_vga_display_controll_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_vga_display_controll_0_0">
       <Config>
-        <Option Name="TopModule" Val="vga_mb_system_s00_data_fifo_0"/>
+        <Option Name="TopModule" Val="vga_mb_system_vga_display_controll_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="vga_mb_system_s01_data_fifo_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_s01_data_fifo_0">
+    <FileSet Name="vga_mb_system_util_vector_logic_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_util_vector_logic_0_1">
       <Config>
-        <Option Name="TopModule" Val="vga_mb_system_s01_data_fifo_0"/>
+        <Option Name="TopModule" Val="vga_mb_system_util_vector_logic_0_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="vga_mb_system_auto_cc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_auto_cc_0">
+    <FileSet Name="vga_mb_system_util_vector_logic_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vga_mb_system_util_vector_logic_0_2">
       <Config>
-        <Option Name="TopModule" Val="vga_mb_system_auto_cc_0"/>
+        <Option Name="TopModule" Val="vga_mb_system_util_vector_logic_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -421,9 +410,7 @@
     </Run>
     <Run Id="vga_mb_system_util_vector_logic_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_util_vector_logic_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_vector_logic_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_util_vector_logic_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -433,9 +420,7 @@
     </Run>
     <Run Id="vga_mb_system_clk_wiz_1_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_clk_wiz_1_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_clk_wiz_1_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_clk_wiz_1_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -445,9 +430,7 @@
     </Run>
     <Run Id="vga_mb_system_rst_clk_wiz_1_100M_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_rst_clk_wiz_1_100M_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_rst_clk_wiz_1_100M_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_rst_clk_wiz_1_100M_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -457,9 +440,7 @@
     </Run>
     <Run Id="vga_mb_system_util_ds_buf_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_util_ds_buf_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_ds_buf_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_util_ds_buf_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -469,9 +450,7 @@
     </Run>
     <Run Id="vga_mb_system_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_proc_sys_reset_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_proc_sys_reset_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -481,9 +460,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_uartlite_0_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_uartlite_0_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_uartlite_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_uartlite_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -493,9 +470,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_gpio_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_gpio_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -505,9 +480,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_gpio_0_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_gpio_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -517,9 +490,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_2_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_gpio_0_2" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_gpio_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -529,9 +500,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_3_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_gpio_0_3" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_gpio_0_3_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -541,9 +510,7 @@
     </Run>
     <Run Id="vga_mb_system_amm_axi_bridge_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_amm_axi_bridge_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_amm_axi_bridge_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_amm_axi_bridge_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -553,9 +520,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_quad_spi_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_quad_spi_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_quad_spi_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_quad_spi_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -565,9 +530,137 @@
     </Run>
     <Run Id="vga_mb_system_mig_7series_0_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_mig_7series_0_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mig_7series_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_mig_7series_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_axi_intc_0_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_intc_0_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_intc_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_intc_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_microblaze_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_microblaze_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_dlmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_dlmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_dlmb_v10_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_ilmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_ilmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_ilmb_v10_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_dlmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_ilmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_lmb_bram_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_lmb_bram_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_lmb_bram_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_mdm_1_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_mdm_1_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mdm_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_mdm_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_smartconnect_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_smartconnect_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_smartconnect_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_smartconnect_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_xbar_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_axi_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_timer_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_timer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_timer_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_axi_ethernetlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_ethernetlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_ethernetlite_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_ethernetlite_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_mii_to_rmii_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_mii_to_rmii_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mii_to_rmii_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_mii_to_rmii_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -587,7 +680,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="vga_mb_system_axi_intc_0_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_intc_0_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_intc_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_intc_0_1_synth_1" IncludeInArchive="true">
+    <Run Id="vga_mb_system_util_vector_logic_0_1_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_util_vector_logic_0_1" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_vector_logic_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_util_vector_logic_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -599,175 +692,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="vga_mb_system_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_microblaze_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_microblaze_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_microblaze_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_dlmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_dlmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_dlmb_v10_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_ilmb_v10_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_ilmb_v10_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_v10_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_ilmb_v10_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_dlmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_dlmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_ilmb_bram_if_cntlr_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_ilmb_bram_if_cntlr_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_bram_if_cntlr_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_lmb_bram_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_lmb_bram_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_lmb_bram_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_lmb_bram_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_mdm_1_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_mdm_1_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mdm_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_mdm_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_smartconnect_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_smartconnect_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_smartconnect_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_smartconnect_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_xbar_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_xbar_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_axi_timer_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_timer_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_timer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_timer_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_axi_ethernetlite_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_axi_ethernetlite_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_ethernetlite_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_axi_ethernetlite_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_mii_to_rmii_0_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_mii_to_rmii_0_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mii_to_rmii_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_mii_to_rmii_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_s00_data_fifo_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_s00_data_fifo_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_s00_data_fifo_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_s00_data_fifo_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_s01_data_fifo_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_s01_data_fifo_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_s01_data_fifo_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_s01_data_fifo_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_auto_cc_0_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_auto_cc_0" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_auto_cc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_auto_cc_0_synth_1" IncludeInArchive="true">
+    <Run Id="vga_mb_system_util_vector_logic_0_2_synth_1" Type="Ft3:Synth" SrcSet="vga_mb_system_util_vector_logic_0_2" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_vector_logic_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vga_mb_system_util_vector_logic_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -799,9 +724,7 @@
     </Run>
     <Run Id="vga_mb_system_util_vector_logic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_vector_logic_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_util_vector_logic_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -818,9 +741,7 @@
     </Run>
     <Run Id="vga_mb_system_clk_wiz_1_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_clk_wiz_1_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_clk_wiz_1_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -837,9 +758,7 @@
     </Run>
     <Run Id="vga_mb_system_rst_clk_wiz_1_100M_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_rst_clk_wiz_1_100M_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_rst_clk_wiz_1_100M_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -856,9 +775,7 @@
     </Run>
     <Run Id="vga_mb_system_util_ds_buf_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_ds_buf_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_util_ds_buf_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -875,9 +792,7 @@
     </Run>
     <Run Id="vga_mb_system_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_proc_sys_reset_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_proc_sys_reset_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -894,9 +809,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_uartlite_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_uartlite_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_uartlite_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -913,9 +826,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_gpio_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -932,9 +843,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_gpio_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -951,9 +860,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_gpio_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -970,9 +877,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_gpio_0_3_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_gpio_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_gpio_0_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -989,9 +894,7 @@
     </Run>
     <Run Id="vga_mb_system_amm_axi_bridge_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_amm_axi_bridge_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_amm_axi_bridge_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1008,9 +911,7 @@
     </Run>
     <Run Id="vga_mb_system_axi_quad_spi_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_quad_spi_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_quad_spi_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1027,9 +928,228 @@
     </Run>
     <Run Id="vga_mb_system_mig_7series_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mig_7series_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_mig_7series_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_axi_intc_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_intc_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_intc_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_microblaze_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_dlmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_dlmb_v10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_ilmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_ilmb_v10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_lmb_bram_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_lmb_bram_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_mdm_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mdm_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_mdm_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_smartconnect_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_smartconnect_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_smartconnect_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_axi_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_timer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_timer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_axi_ethernetlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_ethernetlite_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_ethernetlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="vga_mb_system_mii_to_rmii_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mii_to_rmii_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_mii_to_rmii_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1063,7 +1183,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="vga_mb_system_axi_intc_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_intc_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_intc_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="vga_mb_system_util_vector_logic_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_vector_logic_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_util_vector_logic_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>
@@ -1082,273 +1202,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="vga_mb_system_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_microblaze_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_microblaze_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_dlmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_dlmb_v10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_ilmb_v10_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_v10_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_ilmb_v10_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_dlmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_dlmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_dlmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_ilmb_bram_if_cntlr_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_ilmb_bram_if_cntlr_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_ilmb_bram_if_cntlr_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_lmb_bram_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_lmb_bram_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_lmb_bram_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_mdm_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mdm_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_mdm_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_smartconnect_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_smartconnect_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_smartconnect_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_axi_timer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_timer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_timer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_axi_ethernetlite_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_axi_ethernetlite_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_axi_ethernetlite_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_mii_to_rmii_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_mii_to_rmii_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_mii_to_rmii_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_s00_data_fifo_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_s00_data_fifo_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_s00_data_fifo_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_s01_data_fifo_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_s01_data_fifo_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_s01_data_fifo_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vga_mb_system_auto_cc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_auto_cc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_auto_cc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="vga_mb_system_util_vector_logic_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="vga_mb_system_util_vector_logic_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vga_mb_system_util_vector_logic_0_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
           <Desc>Default settings for Implementation.</Desc>

@@ -1,7 +1,7 @@
 set_property CONFIG_VOLTAGE 3.3 [current_design]
 set_property CFGBVS VCCO [current_design]
 
-# Workaround AXI EthernetLite constraints
+# Workaround AXI EthernetLite constraints (not connected directly to ports, so redundant)
 set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN2.DVD_FF}]
 set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN[3].TX_FF_I}]
 set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN2.TEN_FF}]
@@ -13,6 +13,13 @@ set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN[1].RX_F
 set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN[1].TX_FF_I}]
 set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN[2].RX_FF_I}]
 set_property IOB FALSE [get_cells {vga_mb_system_i/ethernet/U0/IOFFS_GEN[2].TX_FF_I}]
+
+# MII to RMII constraints
+set_property IOB TRUE [get_ports eth_phy_crs_dv]
+set_property IOB TRUE [get_ports eth_phy_rx_er]
+set_property IOB TRUE [get_ports eth_phy_rxd]
+set_property IOB TRUE [get_ports eth_phy_tx_en]
+set_property IOB TRUE [get_ports eth_phy_txd]
 
 ## Clock signal
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports sys_clock]
@@ -73,24 +80,24 @@ set_property -dict {PACKAGE_PIN R11 IOSTANDARD LVCMOS33} [get_ports {rgb_leds_tr
 set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports {rgb_leds_tri_o[0]}]
 
 ### 7 segment anode
-set_property -dict {PACKAGE_PIN J17 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[0]}]
-set_property -dict {PACKAGE_PIN J18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[1]}]
-set_property -dict {PACKAGE_PIN T9 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[2]}]
-set_property -dict {PACKAGE_PIN J14 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[3]}]
-set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[4]}]
-set_property -dict {PACKAGE_PIN T14 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[5]}]
-set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[6]}]
-set_property -dict {PACKAGE_PIN U13 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an_tri_o[7]}]
+set_property -dict {PACKAGE_PIN J17 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[0]}]
+set_property -dict {PACKAGE_PIN J18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[1]}]
+set_property -dict {PACKAGE_PIN T9 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[2]}]
+set_property -dict {PACKAGE_PIN J14 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[3]}]
+set_property -dict {PACKAGE_PIN P14 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[4]}]
+set_property -dict {PACKAGE_PIN T14 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[5]}]
+set_property -dict {PACKAGE_PIN K2 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[6]}]
+set_property -dict {PACKAGE_PIN U13 IOSTANDARD LVCMOS33} [get_ports {seven_seg_an[7]}]
 
 ### 7 segment display
-set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[0]}]
-set_property -dict {PACKAGE_PIN R10 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[1]}]
-set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[2]}]
-set_property -dict {PACKAGE_PIN K13 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[3]}]
-set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[4]}]
-set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[5]}]
-set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[6]}]
-set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp_tri_o[7]}]
+set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[0]}]
+set_property -dict {PACKAGE_PIN R10 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[1]}]
+set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[2]}]
+set_property -dict {PACKAGE_PIN K13 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[3]}]
+set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[4]}]
+set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[5]}]
+set_property -dict {PACKAGE_PIN L18 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[6]}]
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports {seven_seg_disp[7]}]
 
 ### Pmod Headers
 

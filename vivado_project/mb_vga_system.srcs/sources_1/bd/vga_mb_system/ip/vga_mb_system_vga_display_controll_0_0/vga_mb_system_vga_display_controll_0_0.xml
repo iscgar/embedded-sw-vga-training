@@ -729,11 +729,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:00 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:30 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:105c88d7</spirit:value>
+            <spirit:value>9:84a91d14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -744,7 +744,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:105c88d7</spirit:value>
+            <spirit:value>9:84a91d14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -760,11 +760,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:00 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:30 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:105c88d7</spirit:value>
+            <spirit:value>9:84a91d14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -779,11 +779,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:00 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:30 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5e077ad3</spirit:value>
+            <spirit:value>9:caf2ef10</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -799,11 +799,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:34:00 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:23:30 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5e077ad3</spirit:value>
+            <spirit:value>9:caf2ef10</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -817,11 +817,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Apr 16 07:37:56 UTC 2020</spirit:value>
+            <spirit:value>Thu Apr 16 08:25:24 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:105c88d7</spirit:value>
+            <spirit:value>9:84a91d14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1423,39 +1423,39 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/common/irq_sender.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/common/irq_sender.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/common/pulse_synchronizer.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/common/pulse_synchronizer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/common/vga_package.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/common/vga_package.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_display/vga_display_read_controller.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_display/vga_display_read_controller.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_display/vga_display_controller_slave.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_display/vga_display_controller_slave.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_handler/vga_interface/vga_interface_sm.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_handler/vga_interface/vga_interface_sm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_handler/vga_interface/vga_interface.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_handler/vga_interface/vga_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_handler/vga_handler.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_handler/vga_handler.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_display_controller.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_display_controller.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1474,39 +1474,39 @@
         <spirit:userFileType>xci</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/common/irq_sender.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/common/irq_sender.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/common/pulse_synchronizer.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/common/pulse_synchronizer.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/common/vga_package.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/common/vga_package.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_display/vga_display_read_controller.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_display/vga_display_read_controller.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_display/vga_display_controller_slave.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_display/vga_display_controller_slave.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_handler/vga_interface/vga_interface_sm.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_handler/vga_interface/vga_interface_sm.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_handler/vga_interface/vga_interface.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_handler/vga_interface/vga_interface.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_handler/vga_handler.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_handler/vga_handler.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/9f8f/hdl/vga_display_controller.vhd</spirit:name>
+        <spirit:name>../../ipshared/d197/hdl/vga_display_controller.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1591,7 +1591,7 @@
         <xilinx:xpmLibrary>XPM_FIFO</xilinx:xpmLibrary>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>2</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="matzov.idf:user:vga_display_controller:1.0_ARCHIVE_LOCATION">d:/projects/isaacg/vga-training/vga_display_controller</xilinx:tag>
@@ -1800,6 +1800,18 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5f772263_ARCHIVE_LOCATION">d:/projects/vga_traning/vga_display_controller</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1c3c8f4c_ARCHIVE_LOCATION">d:/projects/vga_traning/vga_display_controller</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@887856d_ARCHIVE_LOCATION">d:/projects/vga_traning/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39350b_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5bb4f2_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37ec24d9_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f299c57_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@691cfce5_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@745307fa_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b4aeee1_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59626c23_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57471755_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ae54656_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e54d16_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@625a0e9e_ARCHIVE_LOCATION">d:/projects/vga_training/vga_display_controller</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_SLV_ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
@@ -1852,7 +1864,7 @@
       <xilinx:xilinxVersion>2019.2.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="56882f50"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="e2f959a6"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="51b03af0"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2f2d6fa4"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="093515d1"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="27487382"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c23424cc"/>
