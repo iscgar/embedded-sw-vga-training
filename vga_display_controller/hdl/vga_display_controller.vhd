@@ -202,7 +202,7 @@ begin
     fifo_pixel_wr_data <= (others => '0') when gen_reset_n = C_VGA_RST_POLARITY else swap_bytes(ddr_readdata);
     
     -- DDR AMM bridge
-    amm_bridge_inst : entity work.amm_bridge
+    amm_bridge_inst : entity work.amm_bridge_wrapper
     generic map(
         G_ADDR_WIDTH          => C_MST_AWIDTH,
         G_DATA_WIDTH          => C_MST_DWIDTH
